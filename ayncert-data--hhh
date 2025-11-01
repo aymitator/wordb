@@ -18,9 +18,13 @@ my $ayn = "";
 }
 close(${han});
 undef ${han};
-my @begin = split /\n\/\/DATA START\n/, $ayn;
+my @begin =
+  split /\n\/\/DATA_START\n/,
+    $ayn;
 if(scalar(@begin) != 2){ exit 2; }
-my @end = split /\n\/\/DATA AYNDH\n/, $begin[1];
+my @end =
+  split /\n\/\/DATA_AYNDH\n/,
+    $begin[1];
 if(scalar(@end) != 2){ exit 3; }
 
 open(my ${hanii}, "<", "data") or exit 4;

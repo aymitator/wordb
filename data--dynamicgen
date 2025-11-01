@@ -5,10 +5,10 @@
 <script>
 function $(_sz){return _sz.length;}
 var data = [
-//START DATA
+//DATA_START
 [1,"godliness","bible","he was great"],
 [$("ii"),"holiness","bible",""],
-//AYNDH DATA
+//DATA_AYNDH
 ]; 
 var i=0;
 var d = document;
