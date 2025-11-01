@@ -1,0 +1,52 @@
+#!/usr/bin/perl
+
+#1) read hhh-gen-html,php : get head, non-head
+#ii) read data : line-by-line
+#iii) stdout renewed hhh-gen-html,php
+
+use v5.36.0;
+no feature "unicode_strings";
+use re "/aa";
+
+
+open(my ${han}, "<", "hhh-gen-html.php") or exit 1;
+my $ayn = "";
+{
+  local $/;
+  $ayn = <$han>;
+}
+my @begin = split /\n\/\/DATA START\n/, $ayn;
+if(scalar(@begin) != 2){ exit 2; }
+my @end = split /\n\/\/DATA AYNDH\n/, $begin[1];
+if(scalar(@end) != 2){ exit 3; }
+
+open(my ${hanii}, "<", "data") or exit 4;
+my @stdout = ();
+
+while ( 1 ) {
+my $linei = <$hanii>;
+
+if(defined($linei)) {
+if($linei !~ /^\s*$/) {
+  chomp $linei;
+  my @columns = split(/\s+/, $linei, 1 - (-1) - (-1) - (-1));
+  if(scalar(@columns) < 3 || scalar(@columns > 4)){ exit 5; }
+  push(@stdout, "array(strlen(\"" .
+$columns[0] .
+"\"), \"" . 
+$columns[1] .
+"\", \"" . 
+$columns[2] .
+"\", \"" . 
+$columns[3] .
+"\"),");
+}
+else { last; }
+}
+else { last; }
+}
+say $begin[0] .
+"\n//DATA START\n" .
+join("\n", @stdout) .
+"\n//DATA AYNDH\n" . 
+$end[1];
