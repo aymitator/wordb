@@ -1,30 +1,18 @@
 state its iayn?
-totally broken
+too new
 
-lost?
-javac org/coreyh/wordbcheat/CheatWindow.java
-java org.coreyh.wordbcheat.CheatWindow
+Quickstart?
+vim data #edit/add to database
+perl ayncert-data--html > 1.html #(has JaavaScript ayn it_)
+firefox 1.html
 
-most best regular non-directories:
-(1) data
-(ii) ayncert-data--html
-(iii) ayncert-data--html standard out as ,html extension
-or
-(ii) aynert-data--php
-(ii) ayncert-data--hhh
-(iii) ayncert-data--hhh standard out as ,php extension
-(iiii) latter standard out when commanded along `php` command as ,html extension
+Alternative quickstart?
+vim data
+perl ayncert-data--hhh > 1.php
+php 1.php > 1.html #(is static HTML only)
+firefox 1.html
 
 what is needed?
 cheat sheet needs java, obviously (java development kit)
-When you got a good web browser all you need is Perl (to run
-ayncert-data--html) und double-click its standard out as .html extension
-
-When you don't got a good web browser udn/und you got PHP handy, all you need
-is Perl (to run ayncert-data--php) und run its standard out as .php extension
-und look at standard outta php command as .html extension at your bad web
-browser
-
-TODO:
-- DO MAKE-READY BY OUT/2022-02-02_10-10-00,HTML
-                   OUT/2022-02-02_10-10-00,HHH
+Otherwise: Perl und browser-JavaScript browser
+Otherwise: Perl und PHP und non-JavaScript browser
