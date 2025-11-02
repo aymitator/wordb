@@ -1,5 +1,5 @@
 state its iayn?
-too new
+looks okay
 
 Quickstart?
 vim data #edit/add to database
@@ -12,7 +12,15 @@ perl ayncert-data--hhh > 1.php
 php 1.php > 1.html #(is static HTML only)
 firefox 1.html
 
+Altii quickstart?
+perl data-add myword dictonary word-idea-here
+
+Altiii quickstart?
+javac org/coreyh/wordbcheat/CheatWindow.java
+java org.coreyh.wordbcheat.CheatWindow
+
 what is needed?
-cheat sheet needs java, obviously (java development kit)
-Otherwise: Perl und browser-JavaScript browser
+Perl und browser-JavaScript browser
 Otherwise: Perl und PHP und non-JavaScript browser
+Also: Java Development Kit to run org.coreyh.wordbcheat.CheatWindow.java
+Also: Perl to add to "data" (words) easiest
