@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+
+if( -f "/usr/bin/javac" &&
+    -x "/usr/bin/javac" &&
+    -f "/usr/bin/java" &&
+    -x "/usr/bin/java") {
+print "LOcated what is needed";
+print "\012";
+print "Out is going to todo.log";
+my $out = `/usr/bin/javac org/coreyh/wordbcheat/CheatWindow.java && /usr/bin/java org.coreyh.wordbcheat.CheatWindow >todo.log`;
+if($out ne ""){
+warn "Weird, we got out";
+}
+}
+else {
+print "You must be on Windows or Sun's language aloso source runner is not here on your machine";
+print "\012";
+print "TRy again later?";
+}

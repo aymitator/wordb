@@ -17,7 +17,8 @@ GridLayout gl =
 setLayout(gl);
 btn = new JButton("Submit");
 btn.addActionListener(this);
-btnii = new JButton("Submitii");
+btnii =
+  new JButton("Clear");
 btnii.addActionListener(this);
 t1 = new JTextField();
 tii = new JTextField();
@@ -42,7 +43,9 @@ System.out.println(_s);
 }
 public void actionPerformed(ActionEvent _e) {
 if(((JButton)_e.getSource()).equals(btnii)) {
-out("Writing to todo");
+t1.setText("");
+tii.setText("");
+tiii.setText("");
 }
 else {
 out("perl data-add " +
