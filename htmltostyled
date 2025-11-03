@@ -4,10 +4,21 @@ use v5.36.0;
 no feature "unicode_strings";
 use re "/aa";
 
-if(scalar(@ARGV) != 1){ exit 1; }
+if(scalar(@ARGV) != 1 && scalar(@ARGV) != 3){ exit 1; }
 my $argv = $ARGV[0];
 if($argv !~ /\.html$/){ exit 2; }
 if(! -f $argv){ exit 6; }
+
+my $target_out = "stdout";
+if(scalar(@ARGV) == 3 &&
+   $ARGV[1] eq "-o") {
+  $target_out = $ARGV[2];
+  if($target_out eq "-") {
+    $target_out = "stdout";
+  }
+}
+
+
 open(my ${han}, "<", $argv) or exit 3;
 binmode(${han});
 my $ayn = "";
@@ -33,4 +44,14 @@ if($sz =~ s/<td>([^<]+)/<td style=""><b>$1<\/b>/) {
 last;
 }
 if(!$worked){ exit 9; }
-print $sz;
+
+
+if($target_out eq "stdout") {
+  print $sz;
+} else {
+  open(my ${haniii}, ">", $target_out) or exit 33;
+  binmode(${haniii});
+  print ${haniii} $sz;
+  close(${haniii});
+  undef ${haniii};
+}

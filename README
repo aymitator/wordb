@@ -3,10 +3,10 @@ looks okay
 
 Quickstart?
 vim data #edit/add to database
-perl ayncert-data--html > 1.html #(has JaavaScript ayn it_)
+perl ayncert-data--html -o 1.html
 firefox 1.html
 
 Styling quickstart?
-perl htmltostyled 1.html > ii.html
+perl htmltostyled 1.html -o ii.html
 lynx ii.html
 

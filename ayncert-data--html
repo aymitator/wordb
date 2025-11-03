@@ -8,6 +8,14 @@ use v5.36.0;
 no feature "unicode_strings";
 use re "/aa";
 
+my $target_out = "stdout";
+if(scalar (@ARGV) == 2 && $ARGV[0] eq "-o") {
+  $target_out = $ARGV[1];
+  if($target_out eq "-") {
+    $target_out = "stdout";
+  }
+}
+
 open(my ${han}, "<", 
   "data--dynamicgen") or exit 1;
 binmode(${han});
@@ -55,8 +63,22 @@ else { last; }
 }
 else { last; }
 }
+close($hanii);undef $hanii;
+if($target_out eq "stdout") {
 print $begin[0] .
 "\012//DATA START\012" .
 join("\012", @stdout) .
 "\012//DATA AYNDH\012" . 
 $end[1];
+} else {
+  open(my ${haniii}, ">", $target_out) or exit 33;
+  binmode(${haniii});
+  print ${haniii}
+$begin[0] .
+"\012//DATA START\012" .
+join("\012", @stdout) .
+"\012//DATA AYNDH\012" . 
+$end[1];
+  close(${haniii});
+  undef ${haniii};
+}

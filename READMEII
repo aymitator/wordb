@@ -2,12 +2,12 @@
 
 Alternative quickstart?
 vim data
-perl ayncert-data--hhh > 1.php
-php 1.php > 1.html #(is static HTML only)
+perl ayncert-data--hhh -o 1.php
+php 1.php -o 1.html  #(is static HTML onnly)
 firefox 1.html
 
 Alternative styled quikstart?
-perl htmltostyled 1.html > ii.html
+perl htmltostyled 1.html -o ii.html
 lynx ii.html
 
 Altii quickstart?
