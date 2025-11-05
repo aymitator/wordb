@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
-if( -f "/usr/bin/javac" &&
+if( $^O eq "linux" &&
+    -f "/usr/bin/javac" &&
     -x "/usr/bin/javac" &&
     -f "/usr/bin/java" &&
     -x "/usr/bin/java") {
