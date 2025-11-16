@@ -1,14 +1,8 @@
+What are we doing?
+word list to word database to terminal web out along links-like terminal out
 
-
-Alternative quickstart?
-vim data
-perl ayncert-data--hhh -o 1.php
-php 1.php > 1.html  #(is static HTML only)
-firefox 1.html
-
-Alternative styled quikstart?
-perl htmltostyled 1.html -o ii.html
-lynx ii.html
+What do I need?
+string editor, terminal, *erl IIIII, *H*, links/linksii/lyn*
 
 Altii quickstart?
 perl data-add myword dictonary word-idea-here
@@ -17,10 +11,4 @@ Adding to "data"/"./data" non-commandline solution?
 # (needs JDK/Java Development Kit)
 javac org/coreyh/wordbcheat/CheatWindow.java
 java org.coreyh.wordbcheat.CheatWindow
-
-what is needed?
-Perl iiiii und browser-JavaScript browser
-Otherwise: PERL IIIII und PHP IIII_IIII und any-any browser
-Also: Java Development Kit to run org.coreyh.wordbcheat.CheatWindow.java
-Also: Perl to add to "data" (words) easiest using "data-add"
 
