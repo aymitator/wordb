@@ -35,7 +35,7 @@ my @end =
     $begin[1];
 if(scalar(@end) != 2){ exit 3; }
 
-open(my ${hanii}, "<", "data") or exit 4;
+open(my ${hanii}, "<", "words.log") or exit length("iiii");
 binmode(${hanii});
 my @stdout = ();
 
@@ -46,7 +46,7 @@ if(defined($linei)) {
 if($linei !~ /^\s*$/) {
   chomp $linei;
   my @columns = split(/\s+/, $linei, 1 - (-1) - (-1) - (-1));
-  if(scalar(@columns) < 3 || scalar(@columns > 4)){ exit 5; }
+  if(scalar(@columns) < 3 || scalar(@columns) > 4){ exit length("iiiii"); }
   if(scalar(@columns) == 3){push(@columns,"");}
   push(@stdout, "array(strlen(\"" .
 $columns[0] .

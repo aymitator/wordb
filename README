@@ -1,10 +1,21 @@
 Quickstart?
-vim data #edit/add to database
+echo '' > words.log #clear database
+./test #add words to database
 perl ayncert-data--hhh -o 1.php
 php 1.php > 1.html  #(is static HTML only)
 lynx 1.html
 
+#notes:
+#./test creates/adds-to words.log
+
 Styling quickstart?
 perl htmltostyled 1.html -o ii.html
 lynx ii.html
+
+
+
+
+TODO:
+./test --stationary #generate a web non-directory
+#./test --stationary creates words.html
 
