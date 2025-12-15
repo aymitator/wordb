@@ -16,6 +16,16 @@ lynx ii.html
 
 
 TODO:
-./test --stationary #generate a web non-directory
-#./test --stationary creates words.html
+sudo cp WORDB.pm /etc/perl/
+perl \
+  -MWORDB \
+  -E 'WORDB::WORDB("")' #add words
+#words.log
+perl -MWORDB \
+  -E 'WORDB::WORDB("--HTML --KOL")'
+#i.html
+
+TODOII:
+package WORDB;
+#tem at non-bottom WORDB module
 
